@@ -36,7 +36,7 @@ daily_steps <-
 hist(daily_steps$step_sum)
 ```
 
-![plot of chunk unnamed-chunk-26](figure/f-unnamed-chunk-26-1.png)
+![plot of chunk unnamed-chunk-3](figure/f-unnamed-chunk-3-1.png)
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -69,7 +69,7 @@ interval_mean <-
 with(interval_mean, plot(interval, interval_mean, type = "l"))
 ```
 
-![plot of chunk unnamed-chunk-28](figure/f-unnamed-chunk-28-1.png)
+![plot of chunk unnamed-chunk-5](figure/f-unnamed-chunk-5-1.png)
 
 2. Find out the 5-minute interval that contains the maximum number of steps, on average across all the days in the dataset.
 
@@ -125,7 +125,7 @@ daily_steps2 <-
 hist(daily_steps$step_sum)
 ```
 
-![plot of chunk unnamed-chunk-32](figure/f-unnamed-chunk-32-1.png)
+![plot of chunk unnamed-chunk-9](figure/f-unnamed-chunk-9-1.png)
 
 ```r
 # Seems no impact on the graph with the missing data filled in.
@@ -133,7 +133,7 @@ hist(daily_steps$step_sum)
 
 ### Differences in activity patterns between weekdays and weekends
 
-1. Create a new factor variable in the dataset with two levels â€? â€œweekdayâ€? and â€œweekendâ€? indicating whether a given date is a weekday or weekend day.
+1. Create a new factor variable in the dataset with two levels "weekday" and "weekend"? indicating whether a given date is a weekday or weekend day.
 
 ```r
 activity3 <- 
@@ -156,4 +156,4 @@ g <- ggplot(interval_weekday_mean, aes(interval, interval_mean, color=day))
 g + facet_grid(day ~ .)+ geom_line() + labs(x = "Interval", y = "Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-34](figure/f-unnamed-chunk-34-1.png)
+![plot of chunk unnamed-chunk-11](figure/f-unnamed-chunk-11-1.png)
